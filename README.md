@@ -1,6 +1,8 @@
 # nestjs-graphql
 
-Simple app using nestjs and graphql
+Simple app using nestjs and graphql. This program using monorepo method to create 2 different repo
+school : Manage school information like teacher, student, staff, room
+event : Manage event information like event name, banner, location
 
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>

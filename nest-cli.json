@@ -1,8 +1,32 @@
 {
   "$schema": "https://json.schemastore.org/nest-cli",
   "collection": "@nestjs/schematics",
-  "sourceRoot": "src",
+  "sourceRoot": "apps/nest-graphql/src",
   "compilerOptions": {
-    "deleteOutDir": true
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/nest-graphql/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/nest-graphql",
+  "projects": {
+    "nest-graphql": {
+      "type": "application",
+      "root": "apps/nest-graphql",
+      "entryFile": "main",
+      "sourceRoot": "apps/nest-graphql/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/nest-graphql/tsconfig.app.json"
+      }
+    },
+    "school": {
+      "type": "application",
+      "root": "apps/school",
+      "entryFile": "main",
+      "sourceRoot": "apps/school/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/school/tsconfig.app.json"
+      }
+    }
   }
 }

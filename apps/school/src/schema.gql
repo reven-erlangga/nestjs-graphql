@@ -1,0 +1,42 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type User {
+  """Example field (placeholder)"""
+  id: String!
+
+  """Username (placeholder)"""
+  name: String!
+
+  """Status field (placeholder)"""
+  type: TypeEnum!
+}
+
+enum TypeEnum {
+  TEACHER
+  STUDENT
+  STAFF
+}
+
+type Query {
+  users: [User!]!
+  user(id: Int!): User!
+}
+
+type Mutation {
+  createUser(createUserInput: CreateUserInput!): User!
+  updateUser(updateUserInput: UpdateUserInput!): User!
+  removeUser(id: Int!): User!
+}
+
+input CreateUserInput {
+  """Username (placeholder)"""
+  name: String!
+}
+
+input UpdateUserInput {
+  """Username (placeholder)"""
+  name: String
+  id: Int!
+}
